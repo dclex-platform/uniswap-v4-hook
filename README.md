@@ -1,3 +1,5 @@
+![1](https://github.com/user-attachments/assets/28fac85d-c169-4504-9fe4-a3f00ba957aa)
+
 # DCLEX Uniswap V4 Hook
 
 ## Description
