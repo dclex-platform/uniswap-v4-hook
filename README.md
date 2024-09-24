@@ -1,66 +1,11 @@
-## Foundry
+# DCLEX Uniswap V4 Hook
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Description
+The DCLEX Hook is an innovative solution to ensure compliant trading of tokenized stocks in Uniswap V4. 
 
-Foundry consists of:
+Uniswap V4 introduces hooks, a powerful new feature that allows to create customizable trading pools. The DCLEX Hook leverages this capability to prevent minting of ERC-6909 claim tokens, which would otherwise allow users to bypass DCLEX's identity verification system and violate securities regulations.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+To address this, tokenized stocks issued by DCLEX can only be used with Uniswap V4 pools that have the DCLEX Hook. This requires a modification to the token contract, but DCLEX implemented this modification in its tokenized stocks in a way that it could be reused by other protocols to provide flash loans mechanism.
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## Video
+https://youtu.be/IPxoEpmu8CQ
