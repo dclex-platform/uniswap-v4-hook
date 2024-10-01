@@ -121,7 +121,7 @@ contract PermissionedTokensHook is BaseHook, TransferVerifier, ERC6909 {
         }
     }
 
-    function accountDelta(int256 amount) public {
+    function accountDelta(int256 amount) private {
         tokenDelta += amount;
         if (tokenDelta == 0 && isLocked) {
             CurrencyLibrary.NATIVE.take(poolManager, address(this), 1, false);
